@@ -8,6 +8,12 @@
 ``kubectl run nginx --image nginx:latest --labels app:my-app --port 80``
 ``kubectl get po -n custom``
 
+If you want to replace the existing pod with the new yaml i.e delete old one and create new one
+``kubectl replace --force -f nginx.yaml``
+
+Select pods based on the labels
+``kubectl get pods --selector app=my-app``
+
 Get image name from the pod
 ``kubectl get po webapp -o jsonpath='{..image}'``
 

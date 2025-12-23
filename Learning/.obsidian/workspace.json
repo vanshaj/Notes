@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CKA/Resources/Pods.md",
+                "file": "ML/NNFS/Add More Layers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pods"
+              "title": "Add More Layers"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CKA/Resources/kubectl additional cmds.md",
+                "file": "ML/NNFS/Neuron.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "kubectl additional cmds"
+              "title": "Neuron"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,12 +197,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "388a09ab49f1b9e3",
+  "active": "c8d1d86fe794b09b",
   "lastOpenFiles": [
-    "CKA/Resources/Services.md",
-    "CKA/Resources/kubectl additional cmds.md",
-    "CKA/Resources/Pods.md",
+    "ML/NNFS/Neuron.md",
+    "ML/NNFS/Add More Layers.md",
+    "CKA/Resources/DaemonSets.md",
     "CKA/Resources/ReplicaSet-Deployment.md",
+    "CKA/Resources/Pods.md",
+    "CKA/Scheduling/Resource Limits.md",
+    "CKA/Scheduling/Node Selector - Affinity.md",
+    "ML/NNFS/Input Batches of Data.md",
+    "CKA/Scheduling/Taint Tolerations.md",
+    "CKA/Scheduling/Labels And Selector.md",
+    "CKA/Resources/Services.md",
+    "CKA/Scheduling/Manual Scheduling.md",
+    "CKA/Resources/kubectl additional cmds.md",
+    "CKA/Scheduling",
     "CKA/Resources/Namespace.md",
     "ML/NNFS",
     "Pasted image 20251219083057.png",

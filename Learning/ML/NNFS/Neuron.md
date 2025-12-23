@@ -35,9 +35,9 @@ for wt, bs in zip(w, b):
 	output = 0
 	for in_val, in_wt in zip(x, wt):
 		output = output + in_val*in_wt
-	output = output + bias
+	output = output + bs
 	outputs.append(output)
 print(outputs)
 ```
 
-
+In Matrix formation above can be written as  $$X*W^T + B$$
