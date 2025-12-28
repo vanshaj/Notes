@@ -46,6 +46,8 @@ spec:
 	- name: nginx-container
 	  image: nginx:latest
 	  imagePullPolicy: Always
+	  command: ["sleep"]
+	  args: ["10"]
 ```
 
 ### Commands
