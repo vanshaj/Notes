@@ -10,3 +10,7 @@
 ### Gradient
 1.  Tells us the direction in which the function steeps the most. 
 2. It is a vector of all possible partial derivative of the function
+
+### Chain Rule
+1. Backbone of the Backpropagation
+2. Backprop is the algorithm that is backbone of the neural networks to minimize loss

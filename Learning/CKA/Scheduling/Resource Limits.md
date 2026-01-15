@@ -73,3 +73,40 @@ spec:
 		limits.cpu: 2
 		limits.memory: "4Gi"
 ```
+
+12. If we try to edit the resource limits or requests of a pod, default behaviour is to delete the existing pod and create a new pod. There is no in-place mechanism. This can be disruptive for stateful workloads. In place update of kubernetes resource limits/requests
+13. To enable this we need to set ``FEATURE_GATES=InPlacePodVerticalScaling=true``
+```
+	apiVersion: v1
+	kind: Pod
+	metadata:
+		name: tomcat-pod
+		labels:
+			app: tomapp
+	spec:
+		containers:
+		- image: tomcat:latest
+		  name: tomcat-con
+		  ports:
+		  - containerPort: 80
+		  resizePolicy:
+		  - resourceName: cpu
+			restartPolicy: NotRequired
+		  - resourceName: memory
+		    restartPolicy: RestartContainer
+		  resources:
+			  requests:
+				  cpu: 2
+				  memory: "4Gi"
+			  limits:
+				  cpu: 4
+				  memory: "8Gi"
+```
+The  above will make sure any change in CPU requests/limits will not restart the pod but any change in memory requests/limits will restart the pod
+
+### Limitations
+1. Only CPU and memory Resources can be changed
+2. Pod QoS class can't be changed
+3. Init containers and Epheremal Containers cannot be resized
+4. Resource requests and limits can't be moved once we have set
+5. A containers memory limit can't be set below it's current usage , if a container is put in this state, the size will remains "In Progress" until the desired memory limit is feasible
