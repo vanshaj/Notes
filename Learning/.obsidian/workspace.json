@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "234af418bca2ccfe",
+        "id": "15d0958d4354c50c",
         "type": "tabs",
         "children": [
           {
-            "id": "388a09ab49f1b9e3",
+            "id": "a639782a6ef5a586",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CKA/Resources/Pods.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Pods"
-            }
-          },
-          {
-            "id": "cd44988390e82eb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ML/NNFS/Mathematics of NN.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mathematics of NN"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "requests",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 460.5
   },
   "right": {
     "id": "fcbebd1db0e5301c",
@@ -198,53 +179,54 @@
       "bases:Create new base": false
     }
   },
-  "active": "cd44988390e82eb8",
+  "active": "a639782a6ef5a586",
   "lastOpenFiles": [
-    "ML/NNFS/Optimisation.md",
-    "ML/NNFS/Mathematics of NN.md",
-    "ML/NNFS/Loss Function.md",
-    "CKA/Resources/Pods.md",
     "ML/NNFS/Neuron.md",
-    "CKA/ApplicationLifecyleManagement/ConfigMap-Secrets-Env.md",
-    "Untitled.canvas",
-    "CKA/Resources/ReplicaSet-Deployment.md",
-    "CKA/ApplicationLifecyleManagement/Updates Rollbacks.md",
-    "CKA/Pasted image 20251226131840.png",
-    "CKA/Cluster Level Details/Cluster Architecture.md",
+    "DB/CMU COURSE/Relational Algebra.md",
     "CKA/Monitoring Logging/Monitor Cluster Components.md",
-    "CKA/ApplicationLifecyleManagement",
-    "CKA/Monitoring Logging",
-    "CKA/Untitled.md",
-    "ML/NNFS/Activation Function.md",
-    "CKA/Scheduling/Admission Controller.md",
-    "CKA/Resources/Secrets.md",
-    "CKA/Scheduling/Labels And Selector.md",
-    "CKA/Scheduling/Manual Scheduling.md",
-    "CKA/Scheduling/Multiple Schedulers.md",
+    "CKA/Security/API Groups.md",
+    "CKA/Security/kubeconfig.md",
+    "CKA/Security/Certificate API.md",
+    "CKA/Security/View Certs in existing Cluster.md",
+    "CKA/Security/Authentication.md",
+    "AWS/Architecture.md",
+    "DB/Postgres Advanced",
+    "DB/CMU COURSE",
+    "Untitled",
+    "DB",
+    "CKA/Security/Authorization.md",
+    "Pasted image 20260201203356.png",
+    "CKA/Pasted image 20260201203125.png",
+    "CKA/Pasted image 20260121180434.png",
+    "CKA/Pasted image 20260121180350.png",
+    "CKA/Security/TLS.md",
+    "CKA/kubernetes-certs-checker.xlsx",
+    "Untitled 1.base",
+    "Untitled.base",
+    "Untitled.canvas",
     "CKA/Scheduling/Resource Limits.md",
-    "CKA/Scheduling/Taint Tolerations.md",
-    "CKA/Pasted image 20251215195849.png",
-    "CKA/Pasted image 20251216184119.png",
-    "CKA/Pasted image 20251215201033.png",
-    "CKA/Pasted image 20251216200012.png",
-    "CKA/Pasted image 20251216200441.png",
-    "CKA/Pasted image 20251219081853.png",
-    "CKA/Pasted image 20251219081929.png",
-    "CKA/Pasted image 20251219083057.png",
-    "CKA/Pasted image 20251225123120.png",
+    "CKA/Pasted image 20260116203956.png",
+    "CKA/Pasted image 20260116203732.png",
+    "CKA/Pasted image 20260116202910.png",
+    "CKA/Pasted image 20260116200932.png",
+    "CKA/Pasted image 20260116200916.png",
+    "CKA/Pasted image 20260116200822.png",
+    "CKA/Security/Security Primitives.md",
+    "CKA/Security",
+    "CKA/Cluster Maintainance/Backup And Restore Methodologies.md",
+    "CKA/Cluster Maintainance/Cluster Upgrade.md",
+    "CKA/Cluster Maintainance/OS Upgrades.md",
+    "CKA/ApplicationLifecyleManagement/Autoscaling.md",
+    "CKA/Cluster Maintainance",
+    "CKA/Resources/Pods.md",
+    "CKA/ApplicationLifecyleManagement/Multicontainer Pods.md",
+    "CKA/ApplicationLifecyleManagement/ConfigMap-Secrets-Env.md",
+    "ML/NNFS/Mathematics of NN.md",
+    "ML/NNFS/Optimisation.md",
+    "ML/NNFS/Loss Function.md",
+    "ML/NNFS/Activation Function.md",
     "ML/NNFS/Add More Layers.md",
     "ML/NNFS/Input Batches of Data.md",
-    "AWS/Architecture.md",
-    "CKA/Resources/Events.md",
-    "CKA/Scheduling/PriorityClass.md",
-    "CKA/Resources/DaemonSets.md",
-    "CKA/Scheduling/Node Selector - Affinity.md",
-    "CKA/Scheduling",
-    "ML/NNFS",
-    "ML",
-    "AWS",
-    "CKA/Resources",
-    "CKA/Cluster Level Details",
-    "CKA"
+    "CKA/ApplicationLifecyleManagement"
   ]
 }

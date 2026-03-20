@@ -9,4 +9,3 @@
 	1. Where all core functionalities are present ![[Pasted image 20260201203125.png]]
 6. Named Groups - Are more organized and all new features are going to be available made via the named groups![[Pasted image 20260201203356.png]]
 7. We can't directly acess the kube-apiserver we have to share the certificates of our credentials -k --key, --cert, --cacert
-8. 
