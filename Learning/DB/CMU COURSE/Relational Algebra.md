@@ -119,10 +119,180 @@ predicate could be ``year = 1992`` or ``year = 1992 and name = 'St. Medex'``
 This predicate is simple just a `where` clause
 
 #### Projection
+Generate a relation with tuples that contains only the specified attributes.
+1. Rearrange attributes ordering
+2. Remove unwanted attributes
+3. Manipulate values to create derived attributes
+4. Arithmetic operations and string manipulations as well
+**Syntax** - $\pi_{A_{1},A_{2},..,An}(R)$
 
+*R(a_id,b_id)*
 
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a2   | 103  |
+| a3   | 104  |
 
+$\pi_{b\_id-100,a\_id}(\sigma_{a\_id='a_{2}'}(R))$
 
+| b_id-100 | a_id |
+| -------- | ---- |
+| 2        | a2   |
+| 3        | a2   |
 
+#### Union
+Generate a relation that contains all tuples that is present in either only one or both inputs
+This operator only works if both the relations we are trying to union have the same attributes with the same types
+**Syntax**: $(R \cup S)$
 
+**R(a_id, b_id)** 
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a3   | 103  |
+|      |      |
+**S(a_id, b_id)**
+
+| a_id | b_id |
+| ---- | ---- |
+| a3   | 103  |
+| a4   | 104  |
+| a5   | 105  |
+|      |      |
+**(R U S)**
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a3   | 103  |
+| a4   | 104  |
+| a5   | 105  |
+``(Select * from R) UNION ALL (Select * from S)`` will keep duplicates
+``(Select * from R) UNION (Select * from S)`` will remove duplicates
+
+#### Intersection
+Generate a relation that contains only the tuples that appear in both of the input relations. This operation also works only if the columns are same
+**Syntax**: $(R \cap S)$
+
+**R(a_id, b_id)** 
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a3   | 103  |
+|      |      |
+**S(a_id, b_id)**
+
+| a_id | b_id |
+| ---- | ---- |
+| a3   | 103  |
+| a4   | 104  |
+| a5   | 105  |
+|      |      |
+**$(R \cap S)$
+
+| a_id | b_id |
+| ---- | ---- |
+| a3   | 103  |
+|      |      |
+``(Select * from R) INTERSECT (Select * from U)``
+
+#### Difference
+Generate a relation that contains only tuples that appear in first relation but not in the second. This operation only works if columns are same
+**Syntax** $R - S$ 
+
+**R(a_id, b_id)** 
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a3   | 103  |
+|      |      |
+**S(a_id, b_id)**
+
+| a_id | b_id |
+| ---- | ---- |
+| a3   | 103  |
+| a4   | 104  |
+| a5   | 105  |
+|      |      |
+**$(R - S)$
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+|      |      |
+``(Select * from R) EXCEPT (Select * from S)``
+
+#### PRODUCT
+Generate a relation that contains all possible combination of tuples from the input relation. No need for columns to be same at all.
+**Syntax**: $(R * S)$
+
+**R(a_id, b_id)** 
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a3   | 103  |
+|      |      |
+**S(a_id, b_id)**
+
+| a_id | b_id |
+| ---- | ---- |
+| a3   | 103  |
+| a4   | 104  |
+| a5   | 105  |
+|      |      |
+**$(R * S)$
+
+| R.a_id | R.b_id | S.a_id | S.b_id |
+| ------ | ------ | ------ | ------ |
+| a1     | 101    | a3     | 103    |
+| a1     | 101    | a4     | 104    |
+| a1     | 101    | a5     | 105    |
+| a2     | 102    | a3     | 103    |
+| a2     | 102    | a4     | 104    |
+| a2     | 102    | a5     | 105    |
+| a3     | 103    | a3     | 103    |
+| a3     | 103    | a4     | 104    |
+| a3     | 103    | a5     | 105    |
+``Select * from R CROSS JOIN S``
+
+#### JOIN
+Generate a relation that contains all tuples that are combination of two tuple(one from each input relation) with a common value(s) for one or more attributes
+**Syntax**: $R \infty S$
+
+**R(a_id, b_id)** 
+
+| a_id | b_id |
+| ---- | ---- |
+| a1   | 101  |
+| a2   | 102  |
+| a3   | 103  |
+|      |      |
+**S(a_id, b_id,val)**
+
+| a_id | b_id | val |
+| ---- | ---- | --- |
+| a3   | 103  | XXX |
+| a4   | 104  | YYY |
+| a5   | 105  | ZZZ |
+|      |      |     |
+**$(R \infty S)$
+
+| a_id | b_id | val |
+| ---- | ---- | --- |
+| a3   | 103  | XXX |
+|      |      |     |
+
+``Select * from R JOIN S ON R.a_id = S.a_id AND R.b_id = S.b_id``
 
